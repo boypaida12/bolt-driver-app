@@ -6,6 +6,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import HeroText from "./HeroText";
 import HeroForm from "./HeroForm";
 import WhatsAppSignUp from "../WhatsAppSignUp";
+import { HiChevronDown } from "react-icons/hi2";
 
 function Hero({
   heroHeading,
@@ -19,12 +20,21 @@ function Hero({
   placeholder,
   helperText,
   cityVehicles,
-  citiesDefaultValue
+  cityVehicleDefaultValue,
+  showHiChevronDown,
+  fleetParagraph,
+  individualOwnerSignUp,
+  fleetMainParagraphStart,
+  fleetMainParagraphBold,
+  fleetMainParagraphEnd,
+  cityVehicleName,
+  showVehicleNumber,
+  showCities,
 }) {
   return (
     <>
       <NavigationBar />
-      <Container className="mt-5" style={{ maxWidth: 900 }}>
+      <Container className="mt-5" style={{ maxWidth: 980 }}>
         <Row className="">
           <Col className="text-white mt-5" lg={{ span: 5 }}>
             <HeroText
@@ -43,11 +53,24 @@ function Hero({
               placeholder={placeholder}
               helperText={helperText}
               cityVehicles={cityVehicles}
-              citiesDefaultValue={citiesDefaultValue}
+              cityVehicleDefaultValue={cityVehicleDefaultValue}
+              fleetParagraph={fleetParagraph}
+              individualOwnerSignUp={individualOwnerSignUp}
+              fleetMainParagraphStart={fleetMainParagraphStart}
+              fleetMainParagraphBold={fleetMainParagraphBold}
+              fleetMainParagraphEnd={fleetMainParagraphEnd}
+              cityVehicleName={cityVehicleName}
+              showVehicleNumber={showVehicleNumber}
+              showCities={showCities}
             />
           </Col>
         </Row>
       </Container>
+      <div className="text-center mt-5">
+        {showHiChevronDown && (
+          <HiChevronDown style={{ color: "green" }} className="display-5" />
+        )}
+      </div>
     </>
   );
 }

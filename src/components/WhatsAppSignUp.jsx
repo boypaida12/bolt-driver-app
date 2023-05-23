@@ -4,7 +4,7 @@ import React from "react";
 
 function WhatsAppSignUp() {
   return (
-    <>
+    <div className="mb-5">
       <a
         href="/"
         className="d-flex gap-2 rounded py-2 px-3"
@@ -16,7 +16,7 @@ function WhatsAppSignUp() {
           <br /> <span className="fw-bold fs-5">WhatsApp</span>
         </p>
       </a>
-    </>
+    </div>
   );
 }
 

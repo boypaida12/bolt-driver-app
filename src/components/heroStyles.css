@@ -1,8 +1,15 @@
 .hero-section {
-    background-image: url('../assets/background.jpg');
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.fleet-bg {
+    background-image: url('../assets/fleet-bg.jpg');
+}
+
+.individual-bg {
+    background-image: url('../assets/background.jpg');
 }
 
 .text-after {

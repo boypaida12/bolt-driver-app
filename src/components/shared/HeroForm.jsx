@@ -43,6 +43,21 @@ const cities = [
   },
 ];
 
+const vehicleNumber = [
+  {
+    value: "1-10",
+    label: "1-10",
+  },
+  {
+    value: "11-20",
+    label: "11-20",
+  },
+  {
+    value: "21 and above",
+    label: "21 and above",
+  },
+];
+
 function HeroForm({
   individualHeading,
   fleetHeading,
@@ -51,7 +66,15 @@ function HeroForm({
   placeholder,
   helperText,
   cityVehicles,
-  citiesDefaultValue,
+  cityVehicleDefaultValue,
+  individualOwnerSignUp,
+  fleetParagraph,
+  fleetMainParagraphStart,
+  fleetMainParagraphEnd,
+  fleetMainParagraphBold,
+  cityVehicleName,
+  showVehicleNumber,
+  showCities,
 }) {
   return (
     <>
@@ -61,11 +84,25 @@ function HeroForm({
         <p>
           <small>
             {individualParagraph}
-            <a href="" style={{ color: "#40df6d" }}>
+            <a href="/fleet-driver" style={{ color: "#40df6d" }}>
               {fleetOwnerSignUp}
             </a>
           </small>
-          .
+        </p>
+        <p>
+          <small>
+            {fleetMainParagraphStart}
+            <span className="fw-bold">{fleetMainParagraphBold}</span>
+            {fleetMainParagraphEnd}
+          </small>
+        </p>
+        <p>
+          <small>
+            {fleetParagraph}
+            <a href="/" style={{ color: "#40df6d" }}>
+              {individualOwnerSignUp}
+            </a>
+          </small>
         </p>
         <Box component="form" noValidate>
           <InputLabel sx={{ fontWeight: "700" }}>Email</InputLabel>
@@ -88,9 +125,10 @@ function HeroForm({
             <InputLabel sx={{ fontWeight: "700" }}>Phone</InputLabel>
             <div className="d-inline-flex w-100">
               <TextField
-                id="outlined-select-currency"
+                id="outlined-select-countrycode"
                 select
                 size="small"
+                name="country-code"
                 sx={{
                   width: "50%",
                   backgroundColor: "#F5F5F5",
@@ -134,9 +172,10 @@ function HeroForm({
           <div className="my-4">
             <InputLabel sx={{ fontWeight: "700" }}>{cityVehicles}</InputLabel>
             <TextField
-              id="outlined-select-currency"
+              id="outlined-select-city"
               select
               size="small"
+              name={cityVehicleName}
               fullWidth
               sx={{
                 backgroundColor: "#F5F5F5",
@@ -145,25 +184,46 @@ function HeroForm({
                     border: "1px solid #40df6d",
                   },
               }}
-              defaultValue={citiesDefaultValue}
+              defaultValue={cityVehicleDefaultValue}
             >
-              {cities.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
+              {showCities &&
+                cities.map((option) => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
+              {showVehicleNumber &&
+                vehicleNumber.map((option) => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
             </TextField>
           </div>
           <Button
             variant="contained"
             size="large"
             type="submit"
-            style={{ backgroundColor: "#40df6d", color: "#ffff", paddingBlock: 12, fontSize: 18 }}
+            style={{
+              backgroundColor: "#40df6d",
+              color: "#ffff",
+              paddingBlock: 12,
+              fontSize: 18,
+            }}
             className="w-100"
           >
-            Next <HiOutlineArrowLongRight/>
+            Next <HiOutlineArrowLongRight />
           </Button>
-          <p className="mt-3 mb-0 text-muted lh-sm" style={{ fontSize: 12}}>By signing up, you accept our <a href="/" style={{color:"#40df6d"}}>Terms of Service</a> and <a href="/" style={{color:"#40df6d"}}>Privacy Policy. </a></p>
+          <p className="mt-3 mb-0 text-muted lh-sm" style={{ fontSize: 12 }}>
+            By signing up, you accept our{" "}
+            <a href="/" style={{ color: "#40df6d" }}>
+              {"Terms of Service "}
+            </a>
+            {"and "}
+            <a href="/" style={{ color: "#40df6d" }}>
+              {"Privacy Policy."}
+            </a>
+          </p>
         </Box>
       </div>
     </>

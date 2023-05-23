@@ -5,7 +5,7 @@ import Hero from "../shared/Hero";
 function IndividualDriver() {
   return (
     <>
-      <div className="hero-section">
+      <div className="hero-section individual-bg">
         <Hero
           heroHeading={"Drive With Bolt"}
           heroParagraph={"Earn good money"}
@@ -17,7 +17,9 @@ function IndividualDriver() {
           placeholder={"john.doe@gmail.com"}
           helperText={"This will be your username."}
           cityVehicles={"City"}
-          citiesDefaultValue={"Accra"}
+          cityVehicleDefaultValue={"Accra"}
+          showHiChevronDown={true}
+          showCities={true}
         />
       </div>
     </>
