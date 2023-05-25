@@ -4,6 +4,7 @@ import { Box, InputLabel, MenuItem, TextField } from "@mui/material";
 import React from "react";
 import { Button } from "react-bootstrap";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const countryCode = [
   {
@@ -84,9 +85,9 @@ function HeroForm({
         <p>
           <small>
             {individualParagraph}
-            <a href="/fleet-driver" style={{ color: "#40df6d" }}>
+            <Link to="/fleet-driver" style={{ color: "#40df6d" }}>
               {fleetOwnerSignUp}
-            </a>
+            </Link>
           </small>
         </p>
         <p>
@@ -99,9 +100,9 @@ function HeroForm({
         <p>
           <small>
             {fleetParagraph}
-            <a href="/" style={{ color: "#40df6d" }}>
+            <Link to="/" style={{ color: "#40df6d" }}>
               {individualOwnerSignUp}
-            </a>
+            </Link>
           </small>
         </p>
         <Box component="form" noValidate>
