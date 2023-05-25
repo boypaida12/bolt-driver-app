@@ -5,7 +5,7 @@ import Hero from "../../shared/Hero";
 function FleetDriver() {
   return (
     <>
-      <div className="hero-section fleet-bg">
+      <div className="hero-section fleet-bg pb-2">
         <Hero
           heroHeading={"Add your Fleet to Bolt"}
           heroParagraph={"Manage drivers, vehicles and documents"}

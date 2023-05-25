@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import IndividualDriver from "./components/pages/IndividualDriver";
-import FleetDriver from "./components/pages/fleet-driver/FleetDriver";
 import "./components/heroStyles.css";
-
+import IndividualDriver from "./components/landing/IndividualDriver";
+import FleetDriver from "./components/landing/fleet-driver/FleetDriver";
 
 function App() {
   return (

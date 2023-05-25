@@ -7,8 +7,12 @@ function WhatsAppSignUp() {
     <div className="mb-5">
       <a
         href="/"
-        className="d-flex gap-2 rounded py-2 px-3"
-        style={{ backgroundColor: "#25d366", width: "fit-content", color: "#ffff" }}
+        className="d-flex gap-2 rounded py-2 px-3 whatsapp_signup__button"
+        style={{
+          backgroundColor: "#25d366",
+          width: "fit-content",
+          color: "#ffff",
+        }}
       >
         <WhatsApp sx={{ fontSize: 40, alignSelf: "center" }} />
         <p className="fw-semibold lh-1 m-auto">

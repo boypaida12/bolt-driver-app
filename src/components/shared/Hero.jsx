@@ -67,9 +67,14 @@ function Hero({
         </Row>
       </Container>
       <div className="text-center mt-5">
-        {showHiChevronDown && (
-          <HiChevronDown style={{ color: "green" }} className="display-5" />
-        )}
+        <a href="#about">
+          {showHiChevronDown && (
+            <HiChevronDown
+              style={{ color: "#40df6d" }}
+              className="display-5 mb-5"
+            />
+          )}
+        </a>
       </div>
     </>
   );

@@ -215,7 +215,7 @@ function HeroForm({
             Next <HiOutlineArrowLongRight />
           </Button>
           <p className="mt-3 mb-0 text-muted lh-sm" style={{ fontSize: 12 }}>
-            By signing up, you accept our{" "}
+            {"By signing up, you accept our "}
             <a href="/" style={{ color: "#40df6d" }}>
               {"Terms of Service "}
             </a>
