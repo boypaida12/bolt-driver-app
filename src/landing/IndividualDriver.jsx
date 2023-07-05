@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import Hero from "../shared/Hero";
-import About from "../sections/About";
-import FaqComponent from "../shared/FaqComponent";
-import Footer from "../sections/Footer";
+import Hero from "../components/shared/Hero";
+import About from "../components/sections/About";
+import FaqComponent from "../components/shared/FaqComponent";
+import Footer from "../components/sections/Footer";
 
 function IndividualDriver() {
   return (
@@ -17,7 +17,7 @@ function IndividualDriver() {
           individualHeading={"Signup as a driver below"}
           individualParagraph={"If you have multiple vehicles and drivers, "}
           fleetOwnerSignUp={"signup as a fleet owner here"}
-          placeholder={"john.doe@gmail.com"}
+          placeholder={"kabuteykwashie@gmail.com"}
           helperText={"This will be your username."}
           cityVehicles={"City"}
           cityVehicleDefaultValue={"Accra"}

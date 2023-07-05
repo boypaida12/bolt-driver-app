@@ -2,62 +2,13 @@
 /* eslint-disable no-unused-vars */
 import { Box, InputLabel, MenuItem, TextField } from "@mui/material";
 import React from "react";
-import { Button } from "react-bootstrap";
-import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
+import data from "./fieldData";
+import SharedButton from "./SharedButton";
 
-const countryCode = [
-  {
-    value: "GHANA",
-    label: "+233",
-  },
-  {
-    value: "NIGERIA",
-    label: "+234",
-  },
-  {
-    value: "ESTONIA",
-    label: "+372",
-  },
-  {
-    value: "UK",
-    label: "+44",
-  },
-];
-
-const cities = [
-  {
-    value: "Accra",
-    label: "Accra",
-  },
-  {
-    value: "Tema",
-    label: "Tema",
-  },
-  {
-    value: "Kumasi",
-    label: "Kumasi",
-  },
-  {
-    value: "Koforidua",
-    label: "Koforidua",
-  },
-];
-
-const vehicleNumber = [
-  {
-    value: "1-10",
-    label: "1-10",
-  },
-  {
-    value: "11-20",
-    label: "11-20",
-  },
-  {
-    value: "21 and above",
-    label: "21 and above",
-  },
-];
+const cities = data.cities;
+const vehicleNumber = data.vehicleNumber;
+const countryCode = data.countryCode;
 
 function HeroForm({
   individualHeading,
@@ -85,7 +36,11 @@ function HeroForm({
         <p>
           <small>
             {individualParagraph}
-            <Link to="/fleet-driver" style={{ color: "#40df6d" }}>
+            <Link
+              to="/fleet-driver"
+              style={{ color: "#40df6d" }}
+              className="fw-bold"
+            >
               {fleetOwnerSignUp}
             </Link>
           </small>
@@ -130,6 +85,7 @@ function HeroForm({
                 select
                 size="small"
                 name="country-code"
+                className="text-center"
                 sx={{
                   width: "50%",
                   backgroundColor: "#F5F5F5",
@@ -201,20 +157,7 @@ function HeroForm({
                 ))}
             </TextField>
           </div>
-          <Button
-            variant="contained"
-            size="large"
-            type="submit"
-            style={{
-              backgroundColor: "#40df6d",
-              color: "#ffff",
-              paddingBlock: 12,
-              fontSize: 18,
-            }}
-            className="w-100"
-          >
-            Next <HiOutlineArrowLongRight />
-          </Button>
+          <SharedButton buttonText={"Next"} backgroundColor={"#40df6d"} color={"white"}/>
           <p className="mt-3 mb-0 text-muted lh-sm" style={{ fontSize: 12 }}>
             {"By signing up, you accept our "}
             <a href="/" style={{ color: "#40df6d" }}>

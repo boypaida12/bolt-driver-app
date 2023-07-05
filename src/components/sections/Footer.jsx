@@ -8,7 +8,6 @@ function Footer() {
       <div className="text-center">
         <a href="#hero">
           <Button
-            variant="contained"
             size="large"
             type="submit"
             style={{

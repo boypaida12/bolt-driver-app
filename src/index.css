@@ -32,12 +32,108 @@ a:hover {
   margin-inline: auto;
 }
 
-@media screen and (max-width: 768px) {
+.ls-0 {
+  letter-spacing: -1px;
+}
+
+.custom-container {
+  width: 350px !important;
+}
+
+.pseudo__paragraph, .fg_pswd__hr, .login__pseudo {
+  position: relative;
+}
+
+.login__pseudo::after,
+.login__pseudo::before,
+.pseudo__paragraph::after,
+.pseudo__paragraph::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.083);
+}
+
+.pseudo__paragraph::after,
+.pseudo__paragraph::before{
+  width: 42%;
+}
+
+.login__pseudo::after,
+.login__pseudo::before {
+  width: 28%;
+}
+
+.pseudo__paragraph::after,
+.login__pseudo::after {
+  left: 0;
+}
+
+.pseudo__paragraph::before,
+.login__pseudo::before {
+  right: 0;
+}
+
+.custom-button {
+  background-color: transparent;
+  width: 50%;
+  min-height: 35px;
+  border: transparent;
+  transition: all 300ms ease-in-out;
+}
+
+.shared-button:hover {
+  background-color: #40df6d !important;
+  color: white !important;
+}
+
+.back-button:hover {
+  background-color: #ececece5 !important;
+}
+
+.custom-button-container {
+  background-color: rgba(194, 194, 194, 0.153);
+  padding: 4px;
+  min-height: 2.5rem;
+}
+
+.active {
+  background-color: white !important;
+  border-radius: 5px;
+  box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.21);
+}
+
+.text-green {
+  color: #40df6d;
+}
+
+.bg-green {
+  background-color:#40df6d ;
+}
+
+.text-green:hover {
+  color: #33a453;
+}
+
+.disabled a {
+  cursor: not-allowed !important;
+  pointer-events: all !important;
+}
+
+@media screen and (max-width: 375px) {
   .img-thumbnail {
     width: 75% !important;
+    color: #65d683d2;
   }
 
   .faq-section {
     margin-inline: 12px;
+  }
+
+  .custom-container {
+    width: 90vw !important;
   }
 }

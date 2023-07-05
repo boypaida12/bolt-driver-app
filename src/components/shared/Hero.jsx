@@ -7,6 +7,7 @@ import HeroText from "./HeroText";
 import HeroForm from "./HeroForm";
 import WhatsAppSignUp from "../WhatsAppSignUp";
 import { HiChevronDown } from "react-icons/hi2";
+import { motion } from "framer-motion";
 
 function Hero({
   heroHeading,
@@ -34,9 +35,9 @@ function Hero({
   return (
     <>
       <NavigationBar />
-      <Container className="mt-5" style={{ maxWidth: 980 }}>
+      <Container className="mt-lg-5" style={{ maxWidth: 980 }}>
         <Row className="">
-          <Col className="text-white mt-5" lg={{ span: 5 }}>
+          <Col className="text-white mt-lg-5 mt-4" lg={{ span: 5 }}>
             <HeroText
               heroHeading={heroHeading}
               heroParagraph={heroParagraph}
@@ -66,7 +67,7 @@ function Hero({
           </Col>
         </Row>
       </Container>
-      <div className="text-center mt-5">
+      <motion.div className="text-center mt-5" whileInView={{y: [50, -20, 50], transition: {repeat: 5, duration: 2}}}>
         <a href="#about">
           {showHiChevronDown && (
             <HiChevronDown
@@ -75,7 +76,7 @@ function Hero({
             />
           )}
         </a>
-      </div>
+      </motion.div>
     </>
   );
 }

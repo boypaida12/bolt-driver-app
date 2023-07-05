@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import Hero from "../../shared/Hero";
+import Hero from "../../components/shared/Hero";
+
 
 function FleetDriver() {
   return (

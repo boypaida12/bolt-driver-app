@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
+import { motion } from "framer-motion";
 
 function HeroText({ heroHeading, heroParagraph, boldParagraph }) {
   return (
-    <div className="text-after">
+    <motion.div className="text-after" initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration: 1}}>
       <h1 className="fw-bold">
         {heroHeading}
       </h1>
@@ -12,7 +13,7 @@ function HeroText({ heroHeading, heroParagraph, boldParagraph }) {
         {heroParagraph}
         <span className="fw-bold"> {boldParagraph} </span>
       </p>
-    </div>
+    </motion.div>
   );
 }
 
