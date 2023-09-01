@@ -31,6 +31,10 @@ function Hero({
   cityVehicleName,
   showVehicleNumber,
   showCities,
+  signUp,
+  handleSubmit,
+  handlePasswordChange,
+  handleEmailChange,
 }) {
   return (
     <>
@@ -63,6 +67,10 @@ function Hero({
               cityVehicleName={cityVehicleName}
               showVehicleNumber={showVehicleNumber}
               showCities={showCities}
+              signUp={signUp}
+              handleSubmit={handleSubmit}
+              handlePasswordChange={handlePasswordChange}
+              handleEmailChange={handleEmailChange}
             />
           </Col>
         </Row>

@@ -14,6 +14,7 @@ function SharedButton({
   className,
   link,
   showButtonArrow = true,
+  handleClick
 }) {
   return (
     <>
@@ -31,6 +32,7 @@ function SharedButton({
           fullWidth
           className={`text-capitalize fw-bold ${className}`}
           disabled={disabled}
+          onClick={handleClick}
         >
           {buttonText} {showButtonArrow && <HiOutlineArrowLongRight />}
         </Button>

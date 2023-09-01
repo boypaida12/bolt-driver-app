@@ -27,6 +27,9 @@ function HeroForm({
   cityVehicleName,
   showVehicleNumber,
   showCities,
+  signUp,
+  handlePasswordChange,
+  handleEmailChange,
 }) {
   return (
     <>
@@ -70,6 +73,7 @@ function HeroForm({
             name="email"
             helperText={helperText}
             fullWidth
+            onChange={handleEmailChange}
             sx={{
               "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
                 {
@@ -77,6 +81,27 @@ function HeroForm({
                 },
             }}
           />
+          <div className="my-4">
+            <InputLabel sx={{ fontWeight: "700", mt: 3 }}>
+              <small>Password</small>
+            </InputLabel>
+            <TextField
+              id="password"
+              size="small"
+              name="password"
+              type="password"
+              required={true}
+              onChange={handlePasswordChange}
+              fullWidth
+              sx={{
+                "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+                  {
+                    border: "1px solid #40df6d",
+                  },
+              }}
+            />
+          </div>
+{/*           
           <div className="my-3">
             <InputLabel sx={{ fontWeight: "700" }}>Phone</InputLabel>
             <div className="d-inline-flex w-100">
@@ -125,8 +150,8 @@ function HeroForm({
                 }}
               />
             </div>
-          </div>
-          <div className="my-4">
+          </div> */}
+          {/* <div className="my-4">
             <InputLabel sx={{ fontWeight: "700" }}>{cityVehicles}</InputLabel>
             <TextField
               id="outlined-select-city"
@@ -156,8 +181,13 @@ function HeroForm({
                   </MenuItem>
                 ))}
             </TextField>
-          </div>
-          <SharedButton buttonText={"Next"} backgroundColor={"#40df6d"} color={"white"}/>
+          </div> */}
+          <SharedButton
+            buttonText={"Next"}
+            backgroundColor={"#40df6d"}
+            color={"white"}
+            handleClick={signUp}
+          />
           <p className="mt-3 mb-0 text-muted lh-sm" style={{ fontSize: 12 }}>
             {"By signing up, you accept our "}
             <a href="/" style={{ color: "#40df6d" }}>

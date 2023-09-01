@@ -7,7 +7,15 @@ function Tabs({
   handleEmailChange,
   activeTab,
   setActiveTab,
+  phone,
+  password,
+  email,
+  setEmail,
+  setPhone,
+  setPassword,
+  signIn,
   handlePhoneChange,
+  handlePasswordChange,
 }) {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -33,6 +41,8 @@ function Tabs({
         activeTab={activeTab}
         handleEmailChange={handleEmailChange}
         handlePhoneChange={handlePhoneChange}
+        handlePasswordChange={handlePasswordChange}
+        signIn={signIn}
       />
     </>
   );

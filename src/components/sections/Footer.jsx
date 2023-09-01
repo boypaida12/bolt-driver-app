@@ -6,22 +6,21 @@ function Footer() {
   return (
     <>
       <div className="text-center">
-        <a href="#hero">
+        
           <Button
             size="large"
             type="submit"
             style={{
               backgroundColor: "#40df6d",
-              color: "#ffff",
               paddingBlock: 10,
               fontSize: 18,
               textTransform: "none",
             }}
-            className="fw-semibold"
+            className="fw-semibold footer-button"
           >
-            Signup to drive with Bolt
+            <a href="#hero" className="text-white fs-6 ">Signup to drive with Bolt</a>
           </Button>
-        </a>
+        
         <div className="my-4">
           <span>
             <small>

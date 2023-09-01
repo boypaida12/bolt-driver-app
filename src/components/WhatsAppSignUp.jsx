@@ -5,8 +5,7 @@ import React from "react";
 function WhatsAppSignUp() {
   return (
     <div className="mb-5">
-      <a
-        href="/"
+      <div
         className="d-flex gap-2 rounded py-2 px-3 whatsapp_signup__button"
         style={{
           backgroundColor: "#25d366",
@@ -15,11 +14,11 @@ function WhatsAppSignUp() {
         }}
       >
         <WhatsApp sx={{ fontSize: 40, alignSelf: "center" }} />
-        <p className="fw-semibold lh-1 m-auto">
+        <a href="" className="fw-semibold lh-1 m-auto text-white">
           Sign up on
           <br /> <span className="fw-bold fs-5">WhatsApp</span>
-        </p>
-      </a>
+        </a>
+      </div>
     </div>
   );
 }

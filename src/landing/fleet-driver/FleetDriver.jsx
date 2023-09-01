@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
 import Hero from "../../components/shared/Hero";
 
 
-function FleetDriver() {
+function FleetDriver({handleEmailChange, handlePasswordChange, signUp}) {
   return (
     <>
       <div className="hero-section fleet-bg pb-2">
@@ -21,6 +22,9 @@ function FleetDriver() {
           cityVehicleName={"vehicles"}
           showVehicleNumber={true}
           cityVehicleDefaultValue={"1-10"}
+          handleEmailChange={handleEmailChange}
+          handlePasswordChange={handlePasswordChange}
+          signUp={signUp}
         />
       </div>
     </>

@@ -11,7 +11,7 @@ h1 {
 }
 
 a,
-.whatsapp_signup__button:hover,
+.whatsapp_signup__button a:hover,
 button:hover {
   text-decoration: none !important;
 }
@@ -121,6 +121,10 @@ a:hover {
 .disabled a {
   cursor: not-allowed !important;
   pointer-events: all !important;
+}
+
+.footer-button a:hover {
+  text-decoration: none!important;
 }
 
 @media screen and (max-width: 375px) {

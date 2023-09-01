@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
 import Hero from "../components/shared/Hero";
@@ -5,7 +6,7 @@ import About from "../components/sections/About";
 import FaqComponent from "../components/shared/FaqComponent";
 import Footer from "../components/sections/Footer";
 
-function IndividualDriver() {
+function IndividualDriver({signUp, handlePasswordChange, handleEmailChange}) {
   return (
     <>
       <div className="hero-section individual-bg" id="hero">
@@ -23,6 +24,9 @@ function IndividualDriver() {
           cityVehicleDefaultValue={"Accra"}
           showHiChevronDown={true}
           showCities={true}
+          signUp={signUp}
+          handlePasswordChange={handlePasswordChange}
+          handleEmailChange={handleEmailChange}
         />
       </div>
       <div className="about-section" id="about">

@@ -6,11 +6,20 @@ import SharedButton from "../../components/shared/SharedButton";
 import { Link } from "react-router-dom";
 import SignInNav from "../../components/shared/SignInNav";
 
-function LogIn({email, phone, handleEmailChange, handlePhoneChange}) {
-  
+function LogIn({
+  email,
+  phone,
+  setEmail,
+  setPhone,
+  setPassword,
+  password,
+  signIn,
+  signInWithGoogle,
+  handleEmailChange,
+  handlePhoneChange,
+  handlePasswordChange,
+}) {
   const [activeTab, setActiveTab] = useState("email");
-
-  
 
   const isEmailEmpty = email.length === 0;
   const isPhoneEmpty = phone.length === 0;
@@ -24,12 +33,16 @@ function LogIn({email, phone, handleEmailChange, handlePhoneChange}) {
     <>
       <div className="d-flex justify-content-center align-items-center mt-lg-5 mt-3">
         <div className="custom-container">
-          <SignInNav pseudoTitle={"Log in"} pseudoClassName={"pseudo__paragraph w-42"}/>
+          <SignInNav
+            pseudoTitle={"Log in"}
+            pseudoClassName={"pseudo__paragraph w-42"}
+          />
           <Tabs
             handleEmailChange={handleEmailChange}
             handlePhoneChange={handlePhoneChange}
             activeTab={activeTab}
             setActiveTab={setActiveTab}
+            handlePasswordChange={handlePasswordChange}
           />
           <div className="mt-5 mt-lg-4 mb-2 disabled">
             <SharedButton
@@ -37,6 +50,7 @@ function LogIn({email, phone, handleEmailChange, handlePhoneChange}) {
               buttonText={"Continue"}
               disabled={isDisabled}
               color={"white"}
+              handleClick={signIn}
             />
           </div>
           <div className="mb-4">
